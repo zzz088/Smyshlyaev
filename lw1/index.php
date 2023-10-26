@@ -12,12 +12,9 @@
 <body>
 
     <?php
-
     include 'user.php';
     include 'userservise.php';
 
-
-    // Пример данных
     $user1 = new User('name1', 'password', new DateTime('2000-07-18'));
     $user2 = new User('name12345', 'password', new DateTime('2004-12-06'));
     $user3 = new User('name544', 'password', new DateTime('2010-08-25'));
@@ -54,7 +51,6 @@
         }
         ?>
     </table>
-
 </body>
 
 </html>
