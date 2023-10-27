@@ -1,10 +1,10 @@
-<?php
+<?
 
 class UserService
 {
-    public static function sortByUsername($users, $ascending = true)
+    public static function sortByUsername(array $users, bool $ascending = true): array
     {
-        usort($users, function ($a, $b) use ($ascending) {
+        usort($users, function (User $a, User $b) use ($ascending) {
             if ($a->username == $b->username) {
                 return 0;
             }
@@ -13,9 +13,9 @@ class UserService
         return $users;
     }
 
-    public static function sortByBirthday($users, $ascending = true)
+    public static function sortByBirthday(array $users, bool $ascending = true): array
     {
-        usort($users, function ($a, $b) use ($ascending) {
+        usort($users, function (User $a, User $b) use ($ascending) {
             $dateA = $a->birthday;
             $dateB = $b->birthday;
             if ($dateA == $dateB) {

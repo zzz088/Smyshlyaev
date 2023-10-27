@@ -2,11 +2,11 @@
 
 class User
 {
-    public $username;
-    public $password;
-    public $birthday;
+    public string $username;
+    public string $password;
+    public DateTime $birthday;
 
-    public function __construct($username, $password, $birthday)
+    public function __construct(string $username, string $password, DateTime $birthday)
     {
         $this->username = $username;
         $this->password = $password;
