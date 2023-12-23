@@ -1,11 +1,14 @@
 <?php
-namespace Your\Namespace;
+namespace Your\Pizzastore;
 
-class MargarittaPizzaStore extends PizzaStore {
-    public function createPizza($type): Pizza {
+class MargarittaPizzaStore extends PizzaStore
+{
+    public function createPizza(string $type): Pizza
+    {
         switch ($type) {
             case 'margaritta':
-                return new MargarittaPizza();
+                $pizza = new MargarittaPizza();
+                return $pizza;
             default:
                 throw new \InvalidArgumentException("Неизвестный тип пиццы: $type");
         }
